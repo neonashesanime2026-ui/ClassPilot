@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ClassPilot | Teacher Home</title>
+<meta name="description" content="ClassPilot teacher assignment and assessment page">
+<meta name="author" content="Ktech Empires">
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadTeacherHome()">
+<h1>ClassPilot Teacher Home</h1>
+<p>Welcome, <span id="teacherNameDisplay">Teacher</span></p>
+<button type="button" onclick="logoutTeacher()">Log Out</button>
+
+<section>
+<h2>Create Assignment</h2>
+
+<label for="classToSend">Send assignment to:</label>
+<select id="classToSend">
+    <option value="SS1">SS1</option>
+    <option value="SS2">SS2</option>
+    <option value="SS3">SS3</option>
+</select>
+
+<label for="assignmentType">Assignment type:</label>
+<select id="assignmentType">
+    <option value="text">Textbox</option>
+    <option value="textarea">Textarea</option>
+    <option value="checkbox">Checkbox</option>
+    <option value="radio">Radio Button</option>
+</select>
+
+<label for="question">Question:</label>
+<input id="question" type="text" placeholder="Enter assignment question">
+
+<label for="options">Options (for checkbox or radio; separate with commas):</label>
+<textarea id="options" placeholder="Option 1, Option 2, Option 3"></textarea>
+
+<button type="button" onclick="createAssignment()">Create Assignment</button>
+</section>
+
+<hr>
+
+<section>
+<h2>Student Submissions and Results</h2>
+<div id="teacherResults">
+    <p>Click below to view student submissions.</p>
+</div>
+<button type="button" onclick="loadTeacherResults()">View Submissions</button>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
